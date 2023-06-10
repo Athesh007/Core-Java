@@ -1,40 +1,29 @@
 package oops_concepts.Inheritance;
 
-class A {
-    A() {
-        System.out.println("A's Constructor");
-    }
-
-    void methodA() {
-        System.out.println("A's Method");
-    }
-}
-
-class B extends A {
-    B() {
-        System.out.println("B's Constructor");
-    }
-
-    void methodB() {
-        System.out.println("B's Method");
-    }
-}
-
-class C extends B {
-    C() {
-        System.out.println("C's Constructor");
-    }
-
-    void methodC() {
-        System.out.println("C's Method");
-    }
-}
-
-class MultilevelInheritance {
+public class MultilevelInheritence {
     public static void main(String[] args) {
-        C c = new C();
-        c.methodA();
-        c.methodB();
-        c.methodC();
+        Fuel obj = new Fuel();
+        obj.car();
+        obj.engine_power();
+        obj.fuel_rate();
+    }
+}
+
+class Car {
+    void car() {
+        System.out.println("This is a Bugatti");
+    }
+}
+
+class Engine extends Car {
+    void engine_power() {
+        System.out.println("This is a high Capacity Engine");
+    }
+
+}
+
+class Fuel extends Engine {
+    void fuel_rate() {
+        System.out.println("This is a petrol car");
     }
 }
