@@ -46,12 +46,12 @@ class Mercedes extends Car {
         this.time = time;
     }
 
-    @Override
+    @Override1
     double speed() {
         return distance/time;
     }
 
-    @Override
+    @Override1
     public String toString() {
         return "Mercedes color is " + super.color + "and speed is : " + speed();
     }
